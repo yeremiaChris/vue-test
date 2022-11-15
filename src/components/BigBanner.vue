@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-[500px] relative overflow-hidden shadow-xl z-10 bg-gradient-to-r from-blue-brand via-blue-soft to-green-brand text-white"
+    class="h-[400px] relative overflow-hidden z-10 bg-gradient-to-r from-blue-brand via-blue-soft to-green-brand text-white"
   >
     <div class="container grid grid-cols-2 mx-auto h-full">
       <div class="h-full flex flex-col justify-center">

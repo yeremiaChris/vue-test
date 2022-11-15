@@ -5,7 +5,7 @@
       <img src="/images/logo.png" alt="logo" />
 
       <!-- list of menus -->
-      <ul class="box-between gap-6">
+      <ul class="gap-6 box-between">
         <li
           v-for="(menu, index) in menus"
           :key="index + menu.title"

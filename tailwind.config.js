@@ -6,6 +6,8 @@ module.exports = {
     extend: {
       colors: {
         "blue-brand": "#4097DB",
+        "blue-content": "#029FE4",
+        "soft-gray": "#777777",
         "blue-soft": "#53A7E9",
         "green-brand": "#00cbdb",
       },
