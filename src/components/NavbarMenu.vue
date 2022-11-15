@@ -1,5 +1,5 @@
 <template>
-  <nav class="py-6 shadow">
+  <nav class="py-6 shadow sticky top-0 bg-white z-50">
     <div class="container box-between mx-auto">
       <!-- logo -->
       <img src="/images/logo.png" alt="logo" />
@@ -9,7 +9,7 @@
         <li
           v-for="(menu, index) in menus"
           :key="index + menu.title"
-          class="px-4 py-2 rounded-full box-center bg-blue-400 text-white font-medium"
+          class="px-4 py-2 rounded-full box-center bg-blue-brand text-white font-medium"
         >
           <a href="#">
             {{ menu.title }}

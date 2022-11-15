@@ -1,9 +1,11 @@
 <template>
-  <NavbarMenuVue />
+  <NavbarMenu class="hidden lg:block" />
+  <BigBanner />
 </template>
 
 <script setup>
-import NavbarMenuVue from "./components/Navbar-menu.vue";
+import BigBanner from "./components/BigBanner.vue";
+import NavbarMenu from "./components/NavbarMenu.vue";
 </script>
 
 <script>
