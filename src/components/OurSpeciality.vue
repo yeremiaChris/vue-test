@@ -49,7 +49,11 @@
                 <div class="h-3 w-3 rounded-full bg-soft-gray" />
                 <div class="h-3 w-3 rounded-full bg-soft-gray" />
               </div>
-              <img src="/svg/gray-arrow.svg" alt="arrow" />
+              <img
+                class="transform rotate-180"
+                src="/svg/gray-arrow.svg"
+                alt="arrow"
+              />
             </div>
           </div>
         </div>
