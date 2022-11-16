@@ -3,6 +3,7 @@
     class="bg-[#F8F8F8] min-h-[400px] flex flex-col items-center justify-center py-14"
   >
     <div class="container mx-auto">
+      <!-- description our core value -->
       <h2 class="text-center text-blue-content font-bold text-3xl mb-6">
         Our core value
       </h2>
@@ -12,16 +13,17 @@
         mauris rutrum ac ut volutpat, ornare nibh diam. Montes, vitae, nec amet
         enim.
       </p>
+
+      <!-- our core value data -->
       <div class="grid grid-cols-3 gap-20">
         <div
           class="mt-10"
           v-for="(item, index) in list"
           :key="index + item.title"
         >
-          <h2 class="text-2xl">Dedication</h2>
+          <h2 class="text-2xl">{{ item.title }}</h2>
           <p class="text-soft-gray mt-2">
-            Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-            impedit quo minus id quod maxime placeat.
+            {{ item.description }}
           </p>
         </div>
       </div>

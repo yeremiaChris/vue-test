@@ -1,9 +1,10 @@
 <template>
   <div
-    class="h-[400px] relative overflow-hidden z-10 bg-gradient-to-r from-blue-brand via-blue-soft to-green-brand text-white"
+    class="min-h-[400px] flex flex-col justify-center relative overflow-hidden z-10 bg-gradient-to-r from-blue-brand via-blue-soft to-green-brand text-white"
   >
     <div class="container grid grid-cols-2 mx-auto h-full">
       <div class="h-full flex flex-col justify-center">
+        <!-- content -->
         <h1 class="text-5xl font-bold">
           Discover <br />
           Your Wonder
@@ -14,6 +15,8 @@
           minim veniam.
         </p>
       </div>
+
+      <!-- image -->
       <img
         class="absolute right-0 z-10 -bottom-28"
         width="400"
@@ -23,9 +26,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {};
-</script>
-
-<style></style>

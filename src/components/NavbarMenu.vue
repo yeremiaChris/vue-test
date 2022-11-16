@@ -2,7 +2,9 @@
   <nav class="py-6 shadow sticky top-0 bg-white z-50">
     <div class="container box-between mx-auto">
       <!-- logo -->
-      <img src="/images/logo.png" alt="logo" />
+      <a href="#">
+        <img src="/images/logo.png" alt="logo" />
+      </a>
 
       <!-- list of menus -->
       <ul class="gap-6 box-between">
