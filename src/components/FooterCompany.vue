@@ -2,7 +2,7 @@
   <footer
     class="min-h-[400px] py-10 bg-gradient-to-r from-[#08385F] via-[#07477A] to-[#14619D]"
   >
-    <div class="container mx-auto">
+    <div class="container mx-6 md:mx-auto">
       <img src="/images/white-logo.png" alt="logo" />
 
       <div class="grid grid-cols-2 gap-20 mt-8">
@@ -38,6 +38,14 @@
             </ul>
           </div>
         </div>
+      </div>
+
+      <!-- copy right -->
+      <div
+        class="flex justify-end items-center justify-end gap-5 text-white mt-10"
+      >
+        <img src="/images/white-logo.png" alt="logo" width="100" />
+        <p class="mt-1.5">Copyright - Testing Company</p>
       </div>
     </div>
   </footer>

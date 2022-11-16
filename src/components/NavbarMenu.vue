@@ -1,13 +1,13 @@
 <template>
   <nav class="py-6 shadow sticky top-0 bg-white z-50">
-    <div class="container box-between mx-auto">
+    <div class="md:container box-between mx-6 md:mx-auto">
       <!-- logo -->
       <a href="#">
         <img src="/images/logo.png" alt="logo" />
       </a>
 
       <!-- list of menus -->
-      <ul class="gap-6 box-between">
+      <ul class="gap-6 hidden md:flex justify-between">
         <li
           v-for="(menu, index) in menus"
           :key="index + menu.title"
@@ -18,6 +18,11 @@
           </a>
         </li>
       </ul>
+
+      <!-- humburger menu -->
+      <button class="md:hidden">
+        <img src="/images/humburger-menu.png" alt="humburger-menu" />
+      </button>
     </div>
   </nav>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-[400px] bg-blue-brand">
-    <div class="container mx-auto h-full py-20">
+    <div class="container mx-6 md:mx-auto h-full py-20">
       <div class="bg-white h-full px-10 text-center py-10">
         <!-- description -->
         <h1 class="text-2xl text-blue-content font-bold">OUR SPECIALITY</h1>

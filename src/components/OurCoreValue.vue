@@ -2,7 +2,7 @@
   <div
     class="bg-[#F8F8F8] min-h-[400px] flex flex-col items-center justify-center py-14"
   >
-    <div class="container mx-auto">
+    <div class="container mx-6 md:mx-auto">
       <!-- description our core value -->
       <h2 class="text-center text-blue-content font-bold text-3xl mb-6">
         Our core value

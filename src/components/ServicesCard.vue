@@ -1,8 +1,9 @@
 <template>
   <div
-    class="h-[400px] container flex flex-col justify-center mx-auto bg-white py-10"
+    class="h-[400px] container md:flex flex-col justify-center mx-6 md:mx-auto bg-white py-10"
   >
-    <div class="grid grid-cols-3 gap-20">
+    <!-- on desktop -->
+    <div class="hidden md:grid grid-cols-3 gap-20">
       <!-- card -->
       <div v-for="(item, index) in list" :key="index + item.title">
         <h2 class="text-2xl text-blue-content font-bold">{{ item.title }}</h2>
@@ -12,6 +13,9 @@
         </p>
       </div>
     </div>
+
+    <!-- on mobile -->
+    <div class="md:hidden">mobile</div>
   </div>
 </template>
 
