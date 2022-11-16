@@ -1,23 +1,25 @@
 <template>
   <div
-    class="bg-[#F8F8F8] min-h-[400px] flex flex-col items-center justify-center py-14"
+    class="bg-[#F8F8F8] min-h-[400px] flex flex-col items-center justify-center pt-14 md:py-14"
   >
-    <div class="container mx-6 md:mx-auto">
+    <div class="md:container mx-6 md:mx-auto">
       <!-- description our core value -->
       <h2 class="text-center text-blue-content font-bold text-3xl mb-6">
         Our core value
       </h2>
-      <p class="text-center text-soft-gray">
+      <p class="text-justify md:text-center text-soft-gray">
         Ridiculus laoreet libero pretium et, sit vel elementum convallis fames.
-        Sit suspendisse etiam eget egestas. Aliquet odio et lectus etiam sit. In
-        mauris rutrum ac ut volutpat, ornare nibh diam. Montes, vitae, nec amet
-        enim.
+        Sit suspendisse etiam eget egestas. Aliquet odio et lectus etiam sit.
+        <br />
+        <br />
+        In mauris rutrum ac ut volutpat, ornare nibh diam. Montes, vitae, nec
+        amet enim.
       </p>
 
       <!-- our core value data -->
-      <div class="grid grid-cols-3 gap-20">
+      <div class="grid md:grid-cols-3 md:gap-20">
         <div
-          class="mt-10"
+          class="mt-7 md:mt-10"
           v-for="(item, index) in list"
           :key="index + item.title"
         >
