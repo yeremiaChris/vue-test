@@ -11,11 +11,10 @@
         <li
           v-for="(menu, index) in menus"
           :key="index + menu.title"
-          class="px-4 py-2 rounded-full box-center bg-blue-brand text-white font-medium"
+          @click="scroll(menu.name)"
+          class="px-4 py-2 cursor-pointer rounded-full box-center bg-blue-brand text-white font-medium"
         >
-          <a href="#">
-            {{ menu.title }}
-          </a>
+          {{ menu.title }}
         </li>
       </ul>
 
@@ -34,21 +33,36 @@ export default {
       menus: [
         {
           title: "Company",
+          name: "company",
         },
         {
           title: "Services",
+          name: "services",
         },
         {
           title: "Our Core Values",
+          name: "our-core-values",
         },
         {
           title: "Our Speciality",
+          name: "our-speciality",
         },
         {
           title: "Footer",
+          name: "footer",
         },
       ],
     };
+  },
+
+  methods: {
+    scroll(id) {
+      // element.scrollTo({ top: 200, behavior: "smooth" });
+      window.scrollTo({
+        top: document.querySelector("#" + id).offsetTop - 30,
+        behavior: "smooth",
+      });
+    },
   },
 };
 </script>

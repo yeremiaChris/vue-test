@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-[400px] bg-blue-brand">
+  <div id="our-speciality" class="min-h-[400px] bg-blue-brand">
     <div class="md:container mx-6 md:mx-auto h-full py-14 md:py-20">
       <div class="bg-white h-full px-10 md:text-center py-10">
         <!-- description -->

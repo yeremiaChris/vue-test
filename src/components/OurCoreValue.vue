@@ -1,5 +1,6 @@
 <template>
   <div
+    id="our-core-values"
     class="bg-[#F8F8F8] min-h-[400px] flex flex-col items-center justify-center pt-14 md:py-14"
   >
     <div class="md:container mx-6 md:mx-auto">

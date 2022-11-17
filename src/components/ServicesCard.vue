@@ -1,5 +1,6 @@
 <template>
   <div
+    id="services"
     class="min-h-[400px] md:container md:flex grid flex-col justify-center mx-6 md:mx-auto py-10"
   >
     <!-- on desktop -->

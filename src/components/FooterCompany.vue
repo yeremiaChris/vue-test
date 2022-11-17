@@ -1,5 +1,6 @@
 <template>
   <footer
+    id="footer"
     class="min-h-[400px] py-10 bg-[#07477A] relative md:bg-gradient-to-r from-[#08385F] via-[#07477A] to-[#14619D]"
   >
     <div class="md:container mx-6 md:mx-auto">

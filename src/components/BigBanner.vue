@@ -1,6 +1,7 @@
 <template>
   <!-- desktop -->
   <div
+    id="company"
     class="min-h-[400px] hidden md:flex flex-col justify-center relative overflow-hidden z-10 bg-gradient-to-r from-blue-brand via-blue-soft to-green-brand text-white"
   >
     <div class="container grid grid-cols-2 mx-6 md:mx-auto h-full">
