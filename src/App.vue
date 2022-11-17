@@ -17,13 +17,3 @@ import OurCoreValue from "./components/OurCoreValue.vue";
 import OurSpeciality from "./components/OurSpeciality.vue";
 import ServicesCard from "./components/ServicesCard.vue";
 </script>
-
-<script>
-export default {
-  data() {
-    return {
-      header: " test",
-    };
-  },
-};
-</script>
