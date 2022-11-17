@@ -29,31 +29,61 @@
 
         <!-- card on mobile -->
         <div class="md:hidden box-center">
-          <div class="mt-10 flex flex-col items-between">
-            <img
-              class="self-center"
-              src="/images/speed-improvement.png"
-              alt="speed-improvement"
-            />
-            <h2 class="text-lg mt-4 text-center">Speed Improvement</h2>
-            <p class="text-center text-soft-gray mt-12">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-              euismod libero vel leo auctor, in venenatis nulla consequat. Sed
-              commodo nunc sit amet congue aliquam.
-            </p>
+          <div class="mt-10">
+            <div
+              :class="`flex flex-col items-between duration-300 ${
+                isAnimation ? 'opacity-0' : 'opacity-100'
+              }`"
+            >
+              <img
+                class="self-center"
+                :src="`/images/${list[activeCard].icon}.png`"
+                alt="speed-improvement"
+              />
+              <h2 class="text-lg mt-4 text-center">
+                {{ list[activeCard].title }}
+              </h2>
+              <p class="text-center text-[#A7A7A7] mt-12">
+                {{ list[activeCard].description }}
+              </p>
+            </div>
             <!-- bullet, next and previous button -->
             <div class="mt-10 flex justify-between items-center">
-              <img src="/svg/gray-arrow.svg" alt="arrow" />
+              <button @click="previous">
+                <img
+                  :class="`${
+                    activeCard > 0 ? 'rotate-180' : 'cursor-not-allowed'
+                  }`"
+                  :src="`/svg/${
+                    activeCard > 0 ? 'blue-arrow' : 'gray-arrow'
+                  }.svg`"
+                  alt="arrow"
+                />
+              </button>
               <div class="flex items-center gap-5">
-                <div class="h-3 w-3 rounded-full bg-soft-gray" />
-                <div class="h-3 w-3 rounded-full bg-soft-gray" />
-                <div class="h-3 w-3 rounded-full bg-soft-gray" />
+                <button
+                  v-for="(item, index) in list.length"
+                  :key="item"
+                  @click="handleClickBullet(index)"
+                  :class="`h-3 w-3 rounded-full ${
+                    activeCard === index
+                      ? 'border-2 border-[#3D46A2]'
+                      : 'bg-[#DAF3FC]'
+                  }`"
+                />
               </div>
-              <img
-                class="transform rotate-180"
-                src="/svg/gray-arrow.svg"
-                alt="arrow"
-              />
+              <button @click="next">
+                <img
+                  :class="`${
+                    activeCard === list.length - 1 &&
+                    'rotate-180 cursor-not-allowed'
+                  }`"
+                  :src="`/svg/${
+                    activeCard < list.length - 1 ? 'blue-arrow' : 'gray-arrow'
+                  }.svg`"
+                  alt="arrow"
+                />
+              </button>
             </div>
           </div>
         </div>
@@ -66,18 +96,20 @@
 export default {
   data() {
     return {
+      activeCard: 0,
+      isAnimation: false,
       list: [
         {
           title: "Accesories",
           icon: "accesories",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod libero vel leo auctor, in venenatis nulla consequat. Sed commodo nunc sit amet congue aliquam.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod libero vel leo auctor, in venenatis nulla consequat. Sed commodo nunc sit.",
         },
         {
           title: "Speed Improvement",
           icon: "speed-improvement",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod libero vel leo auctor, in venenatis nulla consequat. Sed commodo nunc sit amet congue aliquam.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod libero vel leo auctor, in venenatis nulla consequat. Sed commodo.",
         },
         {
           title: "Exhaust",
@@ -87,6 +119,31 @@ export default {
         },
       ],
     };
+  },
+
+  watch: {
+    activeCard() {
+      this.isAnimation = true;
+      setTimeout(() => {
+        this.isAnimation = false;
+      }, 300);
+    },
+  },
+
+  methods: {
+    next() {
+      if (this.activeCard < 2) {
+        this.activeCard += 1;
+      }
+    },
+    previous() {
+      if (this.activeCard > 0) {
+        this.activeCard -= 1;
+      }
+    },
+    handleClickBullet(index) {
+      this.activeCard = index;
+    },
   },
 };
 </script>
